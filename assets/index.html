@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Card Details Form</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <section class="card__front">
+        <section class="card__logo">
+          <section class="card__logo--1">&nbsp;</section>
+          <section class="card__logo--2">&nbsp;</section>
+        </section>
+        <section class="card__info">
+          <h2 class="card__number">0000 0000 0000 0000</h2>
+          <section class="card__info-bottom">
+            <p class="card__person">LEONARDO MACHADO</p>
+            <p class="card__date">
+              <span class="card__date--month">00</span>/<span class="card__date--year">00</span>
+            </p>
+          </section>
+        </section>
+      </section>
+      <section class="card__back">
+        <p class="card__pin">000</p>
+      </section>
+    </section>
+
+    <form action="#" class="form">
+      <section class="wrapper">
+        <section class="form__item form__item-1 mb-md">
+          <label class="mb-sm" for="name">Cardholder Name</label>
+          <input type="text" name="name" id="name" class="form__input" maxlength="18" autocomplete="cc-csc"
+            placeholder="e.g. Leonardo Machado" aria-label="Cardholder Name" aria-describedby="name-description">
+          <p class="invalid invalid--1" id="name-description"></p>
+        </section>
+
+        <section class="form__item form__item-2 mb-md">
+          <label class="mb-sm" for="number">Card Number</label>
+          <input type="text" name="number" id="number" class="form__input" minlength="16" maxlength="16"
+            autocomplete="cc-csc" placeholder="e.g. 1234 5678 9123 0000" aria-label="Card Number"
+            aria-describedby="number-description">
+          <p class="invalid invalid--2" id="number-description"></p>
+        </section>
+
+        <section class="form__row mb-md">
+          <section class="form__item form__item-3">
+            <label class="mb-sm" for="date-month">Exp. Date (MM/YY)</label>
+            <section>
+              <input class="form__input divided" type="text" name="date_month" id="date-month" minlength="2" maxlength="2"
+                autocomplete="cc-csc" placeholder="MM" aria-label="Expiration Date Month"
+                aria-describedby="date-description">
+              <input class="form__input divided" type="text" name="date_year" id="date-year" minlength="2" maxlength="2"
+                autocomplete="cc-csc" placeholder="YY" aria-label="Expiration Date Year"
+                aria-describedby="date-description">
+            </section>
+            <p class="invalid invalid--3" id="date-description"></p>
+          </section>
+
+          <section class="form__item form__item-4">
+            <label class="mb-sm" for="pin">CVC</label>
+            <input type="text" name="pin" id="pin" class="form__input" minlength="3" maxlength="3" autocomplete="cc-csc"
+              placeholder="e.g. 123" aria-describedby="pin-description">
+            <p class="invalid invalid--4" id="pin-description"></p>
+          </section>
+        </section>
+      </section>
+
+      <section class="complete hidden">
+        <section class="complete__icon">
+          <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </section>
+
+        <section class="complete__text">
+          <h3>Thank You!</h3>
+          <p>We've added your card details</p>
+        </section>
+      </section>
+
+      <button type="reset" class="reset">Reset</button>
+      <button class="btn-submit" type="submit">Confirm</button>
+      <button class="btn-back hidden" type="button">Back</button>
+    </form>
+
+    <section class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/LeonardoMancilha" target="_blank">Leonardo Machado</a>.
+    </section>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
